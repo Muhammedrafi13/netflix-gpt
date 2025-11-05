@@ -1,8 +1,11 @@
 # Netflix GPT
 
 - Created the react project using vite by running -  npm create vite@latest netflix-gpt -- --template react
-
 - Configured Tailwindcss 
+- Router configured - npm i -D react-router-dom
+- Header
+- Login Form
+- Sign Up Form
 
 # Features 
 - Login / Sign up 
