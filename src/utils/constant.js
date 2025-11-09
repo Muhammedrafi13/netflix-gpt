@@ -7,3 +7,18 @@ export const API_OPTIONS = {
     Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4ZDdmMjM1N2RlOTg1YTVmMTZhZTZhZjcwZGE0MjAwYSIsIm5iZiI6MTY4Mzk4NTUyNS43MTUwMDAyLCJzdWIiOiI2NDVmOTQ3NWVmOGIzMjAxNTU1NDYzNWIiLCJzY29wZXMiOlsiYXBpX3JlYWQiXSwidmVyc2lvbiI6MX0.bBQElVajbSi7hDxKWbpy-AgIVgCspMKPjkPnXRs0I1o'
   }
 };
+
+export const CDN_IMAGE = "https://image.tmdb.org/t/p/w500";
+export const BACKGROUND_IMAGE = "https://assets.nflxext.com/ffe/siteui/vlv3/9c363af5-4750-4f14-87d1-8125f5276db0/web/IN-en-20251027-TRIFECTA-perspective_b68b1528-3a10-4997-9f99-48ccbdb86626_small.jpg";
+export const SUPPORTED_LANGUAGE = [
+  {
+    key: "en", name: "English"
+  },
+  {
+    key: "hindi", name: "Hindi"
+  }
+  ,
+  {
+    key: "spanish", name: "Spanish"
+  }
+];
