@@ -9,7 +9,7 @@ const MainContaniner = () => {
 
 
     return (
-        <div>
+        <div className="pt-[44%] bg-black md:pt-0">
             <VideoTitle title={title} overview={overview} />
             <VideoBackground movieId={id} />
         </div>

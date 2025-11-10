@@ -10,10 +10,15 @@ const userSlice = createSlice({
         },
         removeUser: (state, action) => {
             return null;
+        },
+        decrementGptCount: (state) => {
+            if (state && state.gptSearchCount > 0) {
+                state.gptSearchCount -= 1;
+            }
         }
     }
 })
 
-export  const { addUser, removeUser} = userSlice.actions;
+export const { addUser, removeUser, decrementGptCount } = userSlice.actions;
 
 export default userSlice.reducer;

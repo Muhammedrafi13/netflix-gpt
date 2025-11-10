@@ -33,7 +33,7 @@ const Login = () => {
                         displayName: name.current.value,
                     }).then(() => {
                         const { uid, email, displayName } = auth.currentUser;
-                        dispatch(addUser({ userId: uid, email: email, displayName: displayName }));
+                        dispatch(addUser({ userId: uid, email: email, displayName: displayName, gptSearchCount:2 }));
                     }).catch((error) => {
                          setErrorMessage(error)
                     });
@@ -64,11 +64,11 @@ const Login = () => {
         <div>
             <Header />
             <div className="absolute">
-                <img src={BACKGROUND_IMAGE} alt="background">
+                <img className="h-screen object-cover md:w-screen" src={BACKGROUND_IMAGE} alt="background">
                 </img>
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className="w-3/12 absolute p-12 my-26 mx-auto right-0 left-0 text-white rounded-lg bg-black/70">
-                <h1 className="font-bold text-3xl py-4"> {isSignIn ? "Sign In" : 'Sign Up'} </h1>
+            <form onSubmit={(e) => e.preventDefault()} className="w-full md:w-3/12 absolute p-12 my-26 mx-auto right-0 left-0 text-white rounded-lg bg-black/70">
+                <h1 className="font-bold text-xl md:text-3xl py-4 mx-auto text-center"> {isSignIn ? "Sign In" : 'Sign Up'} </h1>
                 {
                     !isSignIn && (
                         <input type="text" ref={name} placeholder="Full Name" className="bg-gray-700 p-4 my-4 w-full" />
@@ -78,7 +78,7 @@ const Login = () => {
                 <input ref={password} type="password" placeholder="Password" className="bg-gray-700 p-4 my-4 w-full" />
                 <p className="text-red-500 text-lg text-bold">{errorMessage}</p>
                 <button className="bg-red-700 p-4 my-6 w-full rounded-lg" onClick={handleButtonClick}>{isSignIn ? "Sign In" : 'Sign Up'}</button>
-                <p className="py-4 cursor-pointer" onClick={isSignInForm}> {isSignIn ? "New to Netflix? Sign Up Now" : 'Already Registered? Sign In Now'}  </p>
+                <p className="py-4 cursor-pointe text-center" onClick={isSignInForm}> {isSignIn ? "New to Netflix? Sign Up Now" : 'Already Registered? Sign In Now'}  </p>
             </form>
         </div>
     )
